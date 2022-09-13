@@ -13,15 +13,6 @@ kernelspec:
 
 # Chapter 4
 
-In addition to what\'s in Anaconda, this lecture will need the following
-libraries:
-
-```{code-cell} ipython3
-:tags: [remove-output]
-
-!pip install --upgrade quantecon
-```
-
 ## Overview
 
 Python is extremely popular for scientific computing, due to such
