@@ -50,27 +50,73 @@ brew install git.
 
 ### Setting Up New Page
 
+#### Downloading Template
+
 Download the template zip file from GitHub using this [link](https://github.com/nencarc-digital/template/raw/main/book/_static/lecture_specific/index/template.zip). Unzip the file and then export the folder to a desired location and save the folder name.
+
+#### Creating New Repository 
 
 Sign into GitHub using the user credentials. Create a new repository using the following screenshots as a guide. 
 
 Click on the button in the red circle.
 
-```{figure} /_static/lecture_specific/index/screenshot1.jpeg
-:scale: 30%
+```{figure} /_static/lecture_specific/index/screenshot1.png
+:scale: 25%
 ```
 
 Enter a repository name and click on the 'Add a README File' checkbox.
 
-```{figure} /_static/lecture_specific/index/screenshot2.jpeg
-:scale: 30%
+```{figure} /_static/lecture_specific/index/screenshot2.png
+:scale: 25%
 ```
 
 Click on the 'Create Repository' Button.
 
-```{figure} /_static/lecture_specific/index/screenshot3.jpeg
-:scale: 30%
+```{figure} /_static/lecture_specific/index/screenshot3.png
+:scale: 25%
 ```
+
+#### Configuring Repository 
+
+GitHub Pages is required to be enabled within each repository. To achieve this, use the following screenshots as a guide.
+
+First click onto the repository.
+
+```{figure} /_static/lecture_specific/index/screenshot4.png
+:scale: 25%
+```
+
+Click on the repository settings.
+
+```{figure} /_static/lecture_specific/index/screenshot5.png
+:scale: 25%
+```
+
+Click on 'Pages'.
+
+```{figure} /_static/lecture_specific/index/screenshot6.png
+:scale: 25%
+```
+
+To enable GitHub Pages, click on 'None'.
+
+```{figure} /_static/lecture_specific/index/screenshot7.png
+:scale: 25%
+```
+
+Then proceed to click on 'Main'. This source will change to 'gh-pages' at a later date but for now but 'Main' is the only option.
+
+```{figure} /_static/lecture_specific/index/screenshot8.png
+:scale: 25%
+```
+
+Following this step, GitHub Pages is enabled.
+
+
+
+
+
+
 
 ### Adding/Editing/Deleting Content From Page
 
