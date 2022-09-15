@@ -325,12 +325,43 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#packages-needed">
+     Packages Needed
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -342,6 +373,26 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#packages-needed">
+     Packages Needed
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -356,6 +407,21 @@ title="Print to PDF"
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/banner.jpeg"><img alt="../_images/banner.jpeg" src="../_images/banner.jpeg" style="width: 675.0px; height: 225.0px;" /></a>
 </figure>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
+<p>This section will cover how to create your own book using this template.</p>
+<p>You will learn how to</p>
+<ol class="simple">
+<li><p>install the relevant packages required for github</p></li>
+<li><p>setup a new github repository and github page</p></li>
+<li><p>add/edit/delete content from the book</p></li>
+<li><p>push the content to the github repository and live github page</p></li>
+</ol>
+<section id="packages-needed">
+<h3>Packages Needed<a class="headerlink" href="#packages-needed" title="Permalink to this headline">#</a></h3>
+<p>To begin, git needs to be install on your system. Depending if you are on a Windows device or MAC OS device, there are different installation methods to use. For windows, the following <a class="reference external" href="https://github.com/git-for-windows/git/releases/download/v2.37.3.windows.1/Git-2.37.3-32-bit.exe">link</a> will lead you to the installation package. For MAC OS, I would recommend the use of Homebrew for the installation, which can be installed via entering the following code into terminal: /bin/bash -c “$(curl -fsSL <a class="reference external" href="https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh">https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh</a>)”. Once Homebrew is installed, git can then be installed via the following command: brew install git.</p>
+</section>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
