@@ -745,8 +745,21 @@ ecosystem.</p>
 <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html#numpy.zeros">np.zeros</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">a</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Define the outcome
+ydef &lt;- defDataAdd(varname = &quot;Y&quot;, dist = &quot;normal&quot;, 
+                   formula = &quot;5 + 2.5*period + 1.5*T + 3.5*period*T&quot;, 
+                   variance = 3)
+# Generate a &#39;blank&#39; data.table with 24 observations and assign them to groups
+set.seed(1234)
+indData &lt;- genData(24)
+indData &lt;- trtAssign(indData, nTrt = 2, balanced = TRUE, grpName = &quot;T&quot;)
+# Create a longitudinal data set of 3 records for each id
+longData &lt;- addPeriods(indData, nPeriods = 3, idvars = &quot;id&quot;)
+longData &lt;- addColumns(dtDefs = ydef, longData)
+longData[, `:=`(T, factor(T, labels = c(&quot;No&quot;, &quot;Yes&quot;)))]
+# Let&#39;s look at the data
+ggplot(data = longData, aes(x = factor(period), y = Y)) + geom_line(aes(color = T, 
+    group = id)) + scale_color_manual(values = c(&quot;#e38e17&quot;, &quot;#8e17e3&quot;)) + xlab(&quot;Time&quot;)
 </pre></div>
 </div>
 </div>

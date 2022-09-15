@@ -63,8 +63,21 @@ To create a NumPy array containing only zeros we use
 [np.zeros](http://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html#numpy.zeros)
 
 ```{code-cell} ipython3
-a = np.zeros(3)
-a
+# Define the outcome
+ydef <- defDataAdd(varname = "Y", dist = "normal", 
+                   formula = "5 + 2.5*period + 1.5*T + 3.5*period*T", 
+                   variance = 3)
+# Generate a 'blank' data.table with 24 observations and assign them to groups
+set.seed(1234)
+indData <- genData(24)
+indData <- trtAssign(indData, nTrt = 2, balanced = TRUE, grpName = "T")
+# Create a longitudinal data set of 3 records for each id
+longData <- addPeriods(indData, nPeriods = 3, idvars = "id")
+longData <- addColumns(dtDefs = ydef, longData)
+longData[, `:=`(T, factor(T, labels = c("No", "Yes")))]
+# Let's look at the data
+ggplot(data = longData, aes(x = factor(period), y = Y)) + geom_line(aes(color = T, 
+    group = id)) + scale_color_manual(values = c("#e38e17", "#8e17e3")) + xlab("Time")
 ```
 
 ```{code-cell} ipython3
