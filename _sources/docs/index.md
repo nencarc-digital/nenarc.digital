@@ -32,11 +32,15 @@ You will learn how to
 
 ### Packages Needed
 
-To begin, git needs to be install on your system. Depending if you are on a Windows device or MAC OS device, there are different installation methods to use. 
+To begin, Git is required to be installed on your system. Depending if you are on a Windows device or MAC OS device, there are different installation methods to use. 
 
-For windows, the following [link](https://github.com/git-for-windows/git/releases/download/v2.37.3.windows.1/Git-2.37.3-32-bit.exe) will lead you to the installation package. 
+#### Windows Installation
 
-For MAC OS, I would recommend the use of Homebrew for the installation, which can be installed via entering the following code into terminal.
+For Windows, the following [link](https://github.com/git-for-windows/git/releases/download/v2.37.3.windows.1/Git-2.37.3-32-bit.exe) will lead you to the installation package. 
+
+#### Mac OS Installation
+
+For Mac OS, I would recommend the use of Homebrew for the installation, which can be installed via entering the following code into terminal.
 
 ```{code-cell} ipython3
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -112,6 +116,21 @@ Then proceed to click on 'Main'. This source will change to 'gh-pages' at a late
 
 Following this step, GitHub Pages is enabled.
 
+#### Setting Up New Page With Template
+
+To upload the template to the new GitHub Page, you first need to clone the new repository. This should be done using the terminal/Git Bash terminal depending if you are on Mac OS or Windows. 
+
+First, you need the corrent link to clone the repository. On the repository main page, click on the 'Code' button.
+
+```{figure} /_static/lecture_specific/index/screenshot9.png
+:scale: 25%
+```
+
+Then click on 'HTTPS' and then copy the link via the button in the top right. 
+
+```{figure} /_static/lecture_specific/index/screenshot10.png
+:scale: 25%
+```
 
 
 
