@@ -50,7 +50,27 @@ brew install git.
 
 ### Setting Up New Page
 
-Sign into GitHub using the user credentials. 
+Download the template zip file from GitHub using this [link](https://github.com/nencarc-digital/template/raw/main/book/_static/lecture_specific/index/template.zip). Unzip the file and then export the folder to a desired location and save the folder name.
+
+Sign into GitHub using the user credentials. Create a new repository using the following screenshots as a guide. 
+
+Click on the button in the red circle.
+
+```{figure} /_static/lecture_specific/index/screenshot1.jpeg
+:scale: 30%
+```
+
+Enter a repository name and click on the 'Add a README File' checkbox.
+
+```{figure} /_static/lecture_specific/index/screenshot2.jpeg
+:scale: 30%
+```
+
+Click on the 'Create Repository' Button.
+
+```{figure} /_static/lecture_specific/index/screenshot3.jpeg
+:scale: 30%
+```
 
 ### Adding/Editing/Deleting Content From Page
 
