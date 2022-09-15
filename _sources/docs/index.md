@@ -33,9 +33,10 @@ For MAC OS, I would recommend the use of Homebrew for the installation, which ca
 
 Once Homebrew is installed, git can then be installed via the following command.
 
-'''{code-cell} ipython3
- brew install git.
-'''
+```{code-cell} ipython3
+brew install git.
+```
+
 
 
 
