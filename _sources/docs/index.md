@@ -1,3 +1,14 @@
+---
+jupytext:
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
+
 # NENCARC Example Project
 
 This is an example project designed and written by Conor Wall.
@@ -37,6 +48,17 @@ Once Homebrew is installed, git can then be installed via the following command.
 brew install git.
 ```
 
+### Setting Up New Page
+
+Sign into GitHub using the user credentials. 
+
+### Adding/Editing/Deleting Content From Page
+
+Text will appear here.
+
+### Uploading Page Content 
+
+Text will appear here.
 
 
 

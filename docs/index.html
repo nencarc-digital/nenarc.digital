@@ -221,6 +221,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/nencarc-digital/template/master?urlpath=tree/book/docs/index.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -287,6 +316,23 @@ title="Edit this page"
   </button>
   <div class="menu-dropdown__content">
     <ul>
+      <li>
+        <a href="../_sources/docs/index.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
       <li>
         <a href="../_sources/docs/index.md"
    class="headerbtn"
@@ -357,6 +403,21 @@ title="Print to PDF"
      Packages Needed
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-up-new-page">
+     Setting Up New Page
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-editing-deleting-content-from-page">
+     Adding/Editing/Deleting Content From Page
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uploading-page-content">
+     Uploading Page Content
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -386,6 +447,21 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#packages-needed">
      Packages Needed
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-up-new-page">
+     Setting Up New Page
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-editing-deleting-content-from-page">
+     Adding/Editing/Deleting Content From Page
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uploading-page-content">
+     Uploading Page Content
     </a>
    </li>
   </ul>
@@ -422,7 +498,33 @@ title="Print to PDF"
 <p>To begin, git needs to be install on your system. Depending if you are on a Windows device or MAC OS device, there are different installation methods to use.</p>
 <p>For windows, the following <a class="reference external" href="https://github.com/git-for-windows/git/releases/download/v2.37.3.windows.1/Git-2.37.3-32-bit.exe">link</a> will lead you to the installation package.</p>
 <p>For MAC OS, I would recommend the use of Homebrew for the installation, which can be installed via entering the following code into terminal.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>Once Homebrew is installed, git can then be installed via the following command.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">git</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="setting-up-new-page">
+<h3>Setting Up New Page<a class="headerlink" href="#setting-up-new-page" title="Permalink to this headline">#</a></h3>
+<p>Sign into GitHub using the user credentials.</p>
+</section>
+<section id="adding-editing-deleting-content-from-page">
+<h3>Adding/Editing/Deleting Content From Page<a class="headerlink" href="#adding-editing-deleting-content-from-page" title="Permalink to this headline">#</a></h3>
+<p>Text will appear here.</p>
+</section>
+<section id="uploading-page-content">
+<h3>Uploading Page Content<a class="headerlink" href="#uploading-page-content" title="Permalink to this headline">#</a></h3>
+<p>Text will appear here.</p>
 </section>
 </section>
 <div class="toctree-wrapper compound">
