@@ -21,8 +21,21 @@ You will learn how to
 
 ### Packages Needed
 
-To begin, git needs to be install on your system. Depending if you are on a Windows device or MAC OS device, there are different installation methods to use. For windows, the following [link](https://github.com/git-for-windows/git/releases/download/v2.37.3.windows.1/Git-2.37.3-32-bit.exe) will lead you to the installation package. For MAC OS, I would recommend the use of Homebrew for the installation, which can be installed via entering the following code into terminal: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)". Once Homebrew is installed, git can then be installed via the following command: brew install git.
+To begin, git needs to be install on your system. Depending if you are on a Windows device or MAC OS device, there are different installation methods to use. 
 
+For windows, the following [link](https://github.com/git-for-windows/git/releases/download/v2.37.3.windows.1/Git-2.37.3-32-bit.exe) will lead you to the installation package. 
+
+For MAC OS, I would recommend the use of Homebrew for the installation, which can be installed via entering the following code into terminal.
+
+```{code-cell} ipython3
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Once Homebrew is installed, git can then be installed via the following command.
+
+'''{code-cell} ipython3
+ brew install git.
+'''
 
 
 
