@@ -116,6 +116,77 @@ Then proceed to click on 'Main'. This source will change to 'gh-pages' at a late
 
 Following this step, GitHub Pages is enabled.
 
+#### Setting Up Github Credentials
+
+To perform any Git related actions on terminal, it is required that your Github credentials are verified first. 
+
+Enter your Github username first, which in our case as an example is the 'nencarc-digital'.
+
+```{code-cell} ipython3
+git config --global user.name nencarc-digital
+```
+
+Then enter your Github email, which  in our case will be 'nencarc.digital@gmail.com'.
+
+```{code-cell} ipython3
+git config --global user.name nencarc.digital@gmail.com
+```
+
+```{figure} /_static/lecture_specific/index/screenshot12.png
+:scale: 25%
+```
+
+At this stage it may ask for your Github password, which will be sent privately. If this does not work, a Github personal access token may be required.
+
+#### Generating Personal Access Token
+
+Click on the user icon in the top right and then click on settings. 
+
+```{figure} /_static/lecture_specific/index/screenshot14.png
+:scale: 25%
+```
+
+Scroll down to the bottom of the page and click 'Developer Options' on the left-hand side.
+
+```{figure} /_static/lecture_specific/index/screenshot15.png
+:scale: 25%
+```
+
+Click on 'Personal access tokens'.
+
+```{figure} /_static/lecture_specific/index/screenshot16.png
+:scale: 25%
+```
+
+Click 'Generate new token'
+
+```{figure} /_static/lecture_specific/index/screenshot17.png
+:scale: 25%
+```
+
+Enter a token note. 
+
+```{figure} /_static/lecture_specific/index/screenshot18.png
+:scale: 25%
+```
+
+Check every box and click on the 'Generate token' button. 
+
+```{figure} /_static/lecture_specific/index/screenshot19.png
+:scale: 25%
+```
+
+A new token should be generated in the red circle. For the sake of security, the token created in this example is covered by a red rectangle. Paste this new password in the terminal if prompted by an error previously.
+
+```{figure} /_static/lecture_specific/index/screenshot20.png
+:scale: 25%
+```
+
+
+
+
+
+
 #### Setting Up New Page With Template
 
 To upload the template to the new GitHub Page, you first need to clone the new repository. This should be done using the terminal/Git Bash terminal depending if you are on Mac OS or Windows. 
@@ -126,16 +197,21 @@ First, you need the corrent link to clone the repository. On the repository main
 :scale: 25%
 ```
 
-Then click on 'HTTPS' and then copy the link via the button in the top right. 
+Then click on 'HTTPS' and then copy the link via the button on the right circled. 
 
 ```{figure} /_static/lecture_specific/index/screenshot10.png
 :scale: 25%
 ```
 
+Type 'git clone' and paste the link copied above into the terminal. Your code should look something like this.
 
+```{code-cell} ipython3
+git clone https://github.com/nencarc-digital/template.git
+```
 
-
-
+```{figure} /_static/lecture_specific/index/screenshot11.png
+:scale: 25%
+```
 
 ### Adding/Editing/Deleting Content From Page
 

@@ -436,6 +436,16 @@ title="Print to PDF"
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#setting-up-github-credentials">
+       Setting Up Github Credentials
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#generating-personal-access-token">
+       Generating Personal Access Token
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#setting-up-new-page-with-template">
        Setting Up New Page With Template
       </a>
@@ -513,6 +523,16 @@ title="Print to PDF"
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#configuring-repository">
        Configuring Repository
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#setting-up-github-credentials">
+       Setting Up Github Credentials
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#generating-personal-access-token">
+       Generating Personal Access Token
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -635,6 +655,61 @@ title="Print to PDF"
 </figure>
 <p>Following this step, GitHub Pages is enabled.</p>
 </section>
+<section id="setting-up-github-credentials">
+<h4>Setting Up Github Credentials<a class="headerlink" href="#setting-up-github-credentials" title="Permalink to this headline">#</a></h4>
+<p>To perform any Git related actions on terminal, it is required that your Github credentials are verified first.</p>
+<p>Enter your Github username first, which in our case as an example is the ‘nencarc-digital’.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="n">nencarc</span><span class="o">-</span><span class="n">digital</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then enter your Github email, which  in our case will be ‘nencarc.digital&#64;gmail.com’.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="n">nencarc</span><span class="o">.</span><span class="n">digital</span><span class="nd">@gmail</span><span class="o">.</span><span class="n">com</span>
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot12.png"><img alt="../_images/screenshot12.png" src="../_images/screenshot12.png" style="width: 324.5px; height: 185.5px;" /></a>
+</figure>
+<p>At this stage it may ask for your Github password, which will be sent privately. If this does not work, a Github personal access token may be required.</p>
+</section>
+<section id="generating-personal-access-token">
+<h4>Generating Personal Access Token<a class="headerlink" href="#generating-personal-access-token" title="Permalink to this headline">#</a></h4>
+<p>Click on the user icon in the top right and then click on settings.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot14.png"><img alt="../_images/screenshot14.png" src="../_images/screenshot14.png" style="width: 117.0px; height: 265.5px;" /></a>
+</figure>
+<p>Scroll down to the bottom of the page and click ‘Developer Options’ on the left-hand side.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot15.png"><img alt="../_images/screenshot15.png" src="../_images/screenshot15.png" style="width: 144.5px; height: 134.5px;" /></a>
+</figure>
+<p>Click on ‘Personal access tokens’.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot16.png"><img alt="../_images/screenshot16.png" src="../_images/screenshot16.png" style="width: 154.0px; height: 69.5px;" /></a>
+</figure>
+<p>Click ‘Generate new token’</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot17.png"><img alt="../_images/screenshot17.png" src="../_images/screenshot17.png" style="width: 406.5px; height: 153.5px;" /></a>
+</figure>
+<p>Enter a token note.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot18.png"><img alt="../_images/screenshot18.png" src="../_images/screenshot18.png" style="width: 399.5px; height: 101.0px;" /></a>
+</figure>
+<p>Check every box and click on the ‘Generate token’ button.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot19.png"><img alt="../_images/screenshot19.png" src="../_images/screenshot19.png" style="width: 396.5px; height: 238.5px;" /></a>
+</figure>
+<p>A new token should be generated in the red circle. For the sake of security, the token created in this example is covered by a red rectangle. Paste this new password in the terminal if prompted by an error previously.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot20.png"><img alt="../_images/screenshot20.png" src="../_images/screenshot20.png" style="width: 398.5px; height: 117.0px;" /></a>
+</figure>
+</section>
 <section id="setting-up-new-page-with-template">
 <h4>Setting Up New Page With Template<a class="headerlink" href="#setting-up-new-page-with-template" title="Permalink to this headline">#</a></h4>
 <p>To upload the template to the new GitHub Page, you first need to clone the new repository. This should be done using the terminal/Git Bash terminal depending if you are on Mac OS or Windows.</p>
@@ -642,9 +717,20 @@ title="Print to PDF"
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/screenshot9.png"><img alt="../_images/screenshot9.png" src="../_images/screenshot9.png" style="width: 640.0px; height: 305.0px;" /></a>
 </figure>
-<p>Then click on ‘HTTPS’ and then copy the link via the button in the top right.</p>
+<p>Then click on ‘HTTPS’ and then copy the link via the button on the right circled.</p>
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/screenshot10.png"><img alt="../_images/screenshot10.png" src="../_images/screenshot10.png" style="width: 640.0px; height: 308.5px;" /></a>
+</figure>
+<p>Type ‘git clone’ and paste the link copied above into the terminal. Your code should look something like this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nencarc</span><span class="o">-</span><span class="n">digital</span><span class="o">/</span><span class="n">template</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot11.png"><img alt="../_images/screenshot11.png" src="../_images/screenshot11.png" style="width: 335.0px; height: 195.5px;" /></a>
 </figure>
 </section>
 </section>
