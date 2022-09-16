@@ -136,7 +136,13 @@ git config --global user.name nencarc.digital@gmail.com
 :scale: 25%
 ```
 
-At this stage it may ask for your Github password, which will be sent privately. If this does not work, a Github personal access token may be required.
+At this stage it may ask for your Github password, which will be sent privately. If this does not work, a Github personal access token may be required. It also may ask for your password at a later stage, for example, when pushing to the repository. Here is an example of what that may look like.
+
+```{figure} /_static/lecture_specific/index/screenshot21.png
+:scale: 25%
+```
+
+
 
 #### Generating Personal Access Token
 
@@ -181,11 +187,6 @@ A new token should be generated in the red circle. For the sake of security, the
 ```{figure} /_static/lecture_specific/index/screenshot20.png
 :scale: 25%
 ```
-
-
-
-
-
 
 #### Setting Up New Page With Template
 
