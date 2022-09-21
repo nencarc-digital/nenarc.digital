@@ -402,6 +402,11 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#packages-needed">
      Packages Needed
     </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#anaconda-installation-windows-only">
+     Anaconda Installation (Windows Only)
+    </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#windows-installation">
@@ -448,6 +453,16 @@ title="Print to PDF"
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#setting-up-new-page-with-template">
        Setting Up New Page With Template
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pushing-changes-to-github-repository">
+       Pushing Changes To Github Repository
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pushing-to-live-github-page">
+       Pushing To Live Github Page
       </a>
      </li>
     </ul>
@@ -492,6 +507,11 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#packages-needed">
      Packages Needed
     </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#anaconda-installation-windows-only">
+     Anaconda Installation (Windows Only)
+    </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#windows-installation">
@@ -540,6 +560,16 @@ title="Print to PDF"
        Setting Up New Page With Template
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pushing-changes-to-github-repository">
+       Pushing Changes To Github Repository
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pushing-to-live-github-page">
+       Pushing To Live Github Page
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -574,6 +604,7 @@ title="Print to PDF"
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
 <p>This section will cover how to create your own book using this template.</p>
+<p>You will need a GitHub account setup for this process (if not using the <a class="reference external" href="mailto:nencarc&#46;digital&#37;&#52;&#48;gmail&#46;com">nencarc<span>&#46;</span>digital<span>&#64;</span>gmail<span>&#46;</span>com</a> account) which can be done by clicking on this <a class="reference external" href="https://github.com/join">link</a>.</p>
 <p>You will learn how to</p>
 <ol class="simple">
 <li><p>install the relevant packages required for github</p></li>
@@ -584,9 +615,30 @@ title="Print to PDF"
 <section id="packages-needed">
 <h3>Packages Needed<a class="headerlink" href="#packages-needed" title="Permalink to this headline">#</a></h3>
 <p>To begin, Git is required to be installed on your system. Depending if you are on a Windows device or MAC OS device, there are different installation methods to use.</p>
+</section>
+<section id="anaconda-installation-windows-only">
+<h3>Anaconda Installation (Windows Only)<a class="headerlink" href="#anaconda-installation-windows-only" title="Permalink to this headline">#</a></h3>
+<p>Although the use of Git is possible without any python installation, the use of a python environment manager ensures the process is a lot simpler and more convenient.</p>
+<p>Therefore, on a Windows machine the installation of Anaconda is required.</p>
+<p>The link to the download page can be found <a class="reference external" href="https://repo.anaconda.com/archive/Anaconda3-2022.05-Windows-x86_64.exe">here</a>. The following screenshots will help you with the installation process.</p>
 <section id="windows-installation">
 <h4>Windows Installation<a class="headerlink" href="#windows-installation" title="Permalink to this headline">#</a></h4>
 <p>For Windows, the following <a class="reference external" href="https://github.com/git-for-windows/git/releases/download/v2.37.3.windows.1/Git-2.37.3-32-bit.exe">link</a> will lead you to the installation package.</p>
+<p>Two additional packages require installation, GHP-Import and JupyterLab.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">jupyterlab</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="mac-os-installation">
 <h4>Mac OS Installation<a class="headerlink" href="#mac-os-installation" title="Permalink to this headline">#</a></h4>
@@ -602,6 +654,21 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">git</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Two additional packages require installation, GHP-Import and JupyterLab.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">jupyterlab</span>
 </pre></div>
 </div>
 </div>
@@ -635,15 +702,15 @@ title="Print to PDF"
 <p>GitHub Pages is required to be enabled within each repository. To achieve this, use the following screenshots as a guide.</p>
 <p>First click onto the repository.</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/screenshot4.png"><img alt="../_images/screenshot4.png" src="../_images/screenshot4.png" style="width: 636.5px; height: 303.5px;" /></a>
+<a class="reference internal image-reference" href="../_images/screenshot4.png"><img alt="../_images/screenshot4.png" src="../_images/screenshot4.png" style="width: 639.0px; height: 184.0px;" /></a>
 </figure>
 <p>Click on the repository settings.</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/screenshot5.png"><img alt="../_images/screenshot5.png" src="../_images/screenshot5.png" style="width: 640.0px; height: 122.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/screenshot5.png"><img alt="../_images/screenshot5.png" src="../_images/screenshot5.png" style="width: 468.0px; height: 235.5px;" /></a>
 </figure>
 <p>Click on ‘Pages’.</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/screenshot6.png"><img alt="../_images/screenshot6.png" src="../_images/screenshot6.png" style="width: 640.0px; height: 299.5px;" /></a>
+<a class="reference internal image-reference" href="../_images/screenshot6.png"><img alt="../_images/screenshot6.png" src="../_images/screenshot6.png" style="width: 470.5px; height: 267.5px;" /></a>
 </figure>
 <p>To enable GitHub Pages, click on ‘None’.</p>
 <figure class="align-default">
@@ -675,11 +742,11 @@ title="Print to PDF"
 </div>
 </div>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/screenshot12.png"><img alt="../_images/screenshot12.png" src="../_images/screenshot12.png" style="width: 324.5px; height: 185.5px;" /></a>
+<a class="reference internal image-reference" href="../_images/screenshot12.png"><img alt="../_images/screenshot12.png" src="../_images/screenshot12.png" style="width: 584.1px; height: 333.90000000000003px;" /></a>
 </figure>
 <p>At this stage it may ask for your Github password, which will be sent privately. If this does not work, a Github personal access token may be required. It also may ask for your password at a later stage, for example, when pushing to the repository. Here is an example of what that may look like.</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/screenshot21.png"><img alt="../_images/screenshot21.png" src="../_images/screenshot21.png" style="width: 243.5px; height: 15.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/screenshot21.png"><img alt="../_images/screenshot21.png" src="../_images/screenshot21.png" style="width: 438.3px; height: 27.0px;" /></a>
 </figure>
 </section>
 <section id="generating-personal-access-token">
@@ -718,22 +785,131 @@ title="Print to PDF"
 <p>To upload the template to the new GitHub Page, you first need to clone the new repository. This should be done using the terminal/Git Bash terminal depending if you are on Mac OS or Windows.</p>
 <p>First, you need the corrent link to clone the repository. On the repository main page, click on the ‘Code’ button.</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/screenshot9.png"><img alt="../_images/screenshot9.png" src="../_images/screenshot9.png" style="width: 640.0px; height: 305.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/screenshot9.png"><img alt="../_images/screenshot9.png" src="../_images/screenshot9.png" style="width: 623.0px; height: 272.5px;" /></a>
 </figure>
 <p>Then click on ‘HTTPS’ and then copy the link via the button on the right circled.</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/screenshot10.png"><img alt="../_images/screenshot10.png" src="../_images/screenshot10.png" style="width: 640.0px; height: 308.5px;" /></a>
+<a class="reference internal image-reference" href="../_images/screenshot10.png"><img alt="../_images/screenshot10.png" src="../_images/screenshot10.png" style="width: 195.0px; height: 170.0px;" /></a>
 </figure>
-<p>Type ‘git clone’ and paste the link copied above into the terminal. Your code should look something like this.</p>
+<p>Type ‘git clone’ and paste the link copied above into the terminal. Your code should look something like this (the repo name being the name you used earlier and not ‘testrepo’).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nencarc</span><span class="o">-</span><span class="n">digital</span><span class="o">/</span><span class="n">template</span><span class="o">.</span><span class="n">git</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nencarc</span><span class="o">-</span><span class="n">digital</span><span class="o">/</span><span class="n">reponame</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 </div>
 </div>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/screenshot11.png"><img alt="../_images/screenshot11.png" src="../_images/screenshot11.png" style="width: 335.0px; height: 195.5px;" /></a>
+<a class="reference internal image-reference" href="../_images/screenshot11.png"><img alt="../_images/screenshot11.png" src="../_images/screenshot11.png" style="width: 605.7px; height: 126.0px;" /></a>
+</figure>
+<p>You should now have a folder in your directory named the same as the repository name. Type ‘ls’ or ‘dir’ (depending if you’re on MAC OS or Windows) to see new directory.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot23.png"><img alt="../_images/screenshot23.png" src="../_images/screenshot23.png" style="width: 474.59999999999997px; height: 338.79999999999995px;" /></a>
+</figure>
+<p>Replace the contents of that folder with the contents in the ‘template’ zip file that was downloaded earlier in the tutorial.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot24.png"><img alt="../_images/screenshot24.png" src="../_images/screenshot24.png" style="width: 637.5px; height: 349.5px;" /></a>
+</figure>
+<p>Change your directory in the terminal to the new repository folder using the ‘cd’ command.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">reponame</span>
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot25.png"><img alt="../_images/screenshot25.png" src="../_images/screenshot25.png" style="width: 463.4px; height: 22.4px;" /></a>
+</figure>
+<p>Type ‘ls’ or ‘dir’ again and you should see the contents you’ve just copied over from the template folder.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot26.png"><img alt="../_images/screenshot26.png" src="../_images/screenshot26.png" style="width: 373.09999999999997px; height: 23.799999999999997px;" /></a>
+</figure>
+</section>
+<section id="pushing-changes-to-github-repository">
+<h4>Pushing Changes To Github Repository<a class="headerlink" href="#pushing-changes-to-github-repository" title="Permalink to this headline">#</a></h4>
+<p>To upload the updated folder to the GitHub repository, several commands are needed.</p>
+<p>The first of which is the ‘add’ command. This command adds all new and changed giles to the staging area.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">--</span><span class="nb">all</span>
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot27.png"><img alt="../_images/screenshot27.png" src="../_images/screenshot27.png" style="width: 439.59999999999997px; height: 47.599999999999994px;" /></a>
+</figure>
+<p>The next command is the ‘commit’ command. This command commits the changes from the staging area, with a message to detail what the changes are generally speaking.</p>
+<p>For this example, we use ‘initial commit’ (use double quotes on windows) as this is this initial commit to the new respository.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;initial commit&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot28.png"><img alt="../_images/screenshot28.png" src="../_images/screenshot28.png" style="width: 437.5px; height: 297.5px;" /></a>
+</figure>
+<p>The final command is the ‘push’ command. This command pushes the changes to the GitHub repository to the ‘main’ branch.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">main</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot29.png"><img alt="../_images/screenshot29.png" src="../_images/screenshot29.png" style="width: 317.09999999999997px; height: 110.6px;" /></a>
+</figure>
+<p>The changes should now be pushed to the Github repository.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot30.png"><img alt="../_images/screenshot30.png" src="../_images/screenshot30.png" style="width: 646.0999999999999px; height: 325.5px;" /></a>
+</figure>
+</section>
+<section id="pushing-to-live-github-page">
+<h4>Pushing To Live Github Page<a class="headerlink" href="#pushing-to-live-github-page" title="Permalink to this headline">#</a></h4>
+<p>To push to the live Github page, the book needs to be ‘built’ first. This is done using the command below which utilises the ‘jupyterlabs’ packages installed earlier.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jb</span> <span class="n">build</span> <span class="n">book</span><span class="o">/</span>  
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot31.png"><img alt="../_images/screenshot31.png" src="../_images/screenshot31.png" style="width: 432.59999999999997px; height: 298.2px;" /></a>
+</figure>
+<p>The built book is now visable locally using URL shown, which will be different to the URL for your repository.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">file</span><span class="p">:</span><span class="o">///</span><span class="n">Users</span><span class="o">/</span><span class="n">conorwall</span><span class="o">/</span><span class="n">reponame</span><span class="o">/</span><span class="n">book</span><span class="o">/</span><span class="n">_build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot32.png"><img alt="../_images/screenshot32.png" src="../_images/screenshot32.png" style="width: 437.5px; height: 293.29999999999995px;" /></a>
+</figure>
+<p>To push the locally built book to the live Github page, enter the following command.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">book</span><span class="o">/</span><span class="n">_build</span><span class="o">/</span><span class="n">html</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot33.png"><img alt="../_images/screenshot33.png" src="../_images/screenshot33.png" style="width: 376.59999999999997px; height: 155.39999999999998px;" /></a>
+</figure>
+<p>This process should take a few minutes to complete but in the Pages settings page, you should see that the website is now live at the specified URL.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot34.png"><img alt="../_images/screenshot34.png" src="../_images/screenshot34.png" style="width: 550.9px; height: 125.99999999999999px;" /></a>
+</figure>
+<p>Here is a screenshot of your new Github Page live!</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/screenshot35.png"><img alt="../_images/screenshot35.png" src="../_images/screenshot35.png" style="width: 895.3px; height: 436.09999999999997px;" /></a>
 </figure>
 </section>
 </section>

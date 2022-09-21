@@ -17,14 +17,37 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+conda install -c conda-forge ghp-import
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m/var/folders/5p/zmsw1yv53hz4twsf7nhcrytr0000gn/T/ipykernel_40119/898478736.py[0m in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0;31m [0mbin[0m[0;34m/[0m[0mbash[0m[0;34m([0m[0;34m-[0m[0mc[0m[0;34m,[0m [0;34m"$(curl, -fsSL, https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"[0m[0;34m)[0m[0;34m[0m[0m
+[0;31mValueError[0m                                Traceback (most recent call last)
+[0;32m/var/folders/5p/zmsw1yv53hz4twsf7nhcrytr0000gn/T/ipykernel_17189/2761625588.py[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0mget_ipython[0m[0;34m([0m[0;34m)[0m[0;34m.[0m[0mrun_line_magic[0m[0;34m([0m[0;34m'conda'[0m[0;34m,[0m [0;34m'install -c conda-forge ghp-import'[0m[0;34m)[0m[0;34m[0m[0m
 [0m
-[0;31mNameError[0m: name 'bash' is not defined
-NameError: name 'bash' is not defined
+[0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/IPython/core/interactiveshell.py[0m in [0;36mrun_line_magic[0;34m(self, magic_name, line, _stack_depth)[0m
+[1;32m   2416[0m                 [0mkwargs[0m[0;34m[[0m[0;34m'local_ns'[0m[0;34m][0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mget_local_scope[0m[0;34m([0m[0mstack_depth[0m[0;34m)[0m[0;34m[0m[0m
+[1;32m   2417[0m             [0;32mwith[0m [0mself[0m[0;34m.[0m[0mbuiltin_trap[0m[0;34m:[0m[0;34m[0m[0m
+[0;32m-> 2418[0;31m                 [0mresult[0m [0;34m=[0m [0mfn[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m   2419[0m             [0;32mreturn[0m [0mresult[0m[0;34m[0m[0m
+[1;32m   2420[0m [0;34m[0m[0m
+
+[0;32m<decorator-gen-100>[0m in [0;36mconda[0;34m(self, line)[0m
+
+[0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/IPython/core/magic.py[0m in [0;36m<lambda>[0;34m(f, *a, **k)[0m
+[1;32m    185[0m     [0;31m# but it's overkill for just that one bit of state.[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    186[0m     [0;32mdef[0m [0mmagic_deco[0m[0;34m([0m[0marg[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+[0;32m--> 187[0;31m         [0mcall[0m [0;34m=[0m [0;32mlambda[0m [0mf[0m[0;34m,[0m [0;34m*[0m[0ma[0m[0;34m,[0m [0;34m**[0m[0mk[0m[0;34m:[0m [0mf[0m[0;34m([0m[0;34m*[0m[0ma[0m[0;34m,[0m [0;34m**[0m[0mk[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    188[0m [0;34m[0m[0m
+[1;32m    189[0m         [0;32mif[0m [0mcallable[0m[0;34m([0m[0marg[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+
+[0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/IPython/core/magics/packaging.py[0m in [0;36mconda[0;34m(self, line)[0m
+[1;32m     84[0m         """
+[1;32m     85[0m         [0;32mif[0m [0;32mnot[0m [0m_is_conda_environment[0m[0;34m([0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+[0;32m---> 86[0;31m             raise ValueError("The python kernel does not appear to be a conda environment.  "
+[0m[1;32m     87[0m                              "Please use ``%pip install`` instead.")
+[1;32m     88[0m [0;34m[0m[0m
+
+[0;31mValueError[0m: The python kernel does not appear to be a conda environment.  Please use ``%pip install`` instead.
+ValueError: The python kernel does not appear to be a conda environment.  Please use ``%pip install`` instead.
 

@@ -21,7 +21,9 @@ This will include additional information when required. The Github repo can be f
 
 ## Overview
 
-This section will cover how to create your own book using this template.
+This section will cover how to create your own book using this template. 
+
+You will need a GitHub account setup for this process (if not using the nencarc.digital@gmail.com account) which can be done by clicking on this [link](https://github.com/join).
 
 You will learn how to
 
@@ -34,9 +36,27 @@ You will learn how to
 
 To begin, Git is required to be installed on your system. Depending if you are on a Windows device or MAC OS device, there are different installation methods to use. 
 
+### Anaconda Installation (Windows Only)
+
+Although the use of Git is possible without any python installation, the use of a python environment manager ensures the process is a lot simpler and more convenient. 
+
+Therefore, on a Windows machine the installation of Anaconda is required. 
+
+The link to the download page can be found [here](https://repo.anaconda.com/archive/Anaconda3-2022.05-Windows-x86_64.exe). The following screenshots will help you with the installation process.
+
 #### Windows Installation
 
 For Windows, the following [link](https://github.com/git-for-windows/git/releases/download/v2.37.3.windows.1/Git-2.37.3-32-bit.exe) will lead you to the installation package. 
+
+Two additional packages require installation, GHP-Import and JupyterLab.
+
+```{code-cell} ipython3
+conda install -c conda-forge ghp-import
+```
+
+```{code-cell} ipython3
+conda install -c conda-forge jupyterlab
+```
 
 #### Mac OS Installation
 
@@ -50,6 +70,16 @@ Once Homebrew is installed, git can then be installed via the following command.
 
 ```{code-cell} ipython3
 brew install git.
+```
+
+Two additional packages require installation, GHP-Import and JupyterLab.
+
+```{code-cell} ipython3
+pip install ghp-import
+```
+
+```{code-cell} ipython3
+pip install jupyterlab
 ```
 
 ### Setting Up New Page
@@ -133,16 +163,14 @@ git config --global user.name nencarc.digital@gmail.com
 ```
 
 ```{figure} /_static/lecture_specific/index/screenshot12.png
-:scale: 25%
+:scale: 45%
 ```
 
 At this stage it may ask for your Github password, which will be sent privately. If this does not work, a Github personal access token may be required. It also may ask for your password at a later stage, for example, when pushing to the repository. Here is an example of what that may look like.
 
 ```{figure} /_static/lecture_specific/index/screenshot21.png
-:scale: 25%
+:scale: 45%
 ```
-
-
 
 #### Generating Personal Access Token
 
@@ -192,7 +220,7 @@ A new token should be generated in the red circle. For the sake of security, the
 
 To upload the template to the new GitHub Page, you first need to clone the new repository. This should be done using the terminal/Git Bash terminal depending if you are on Mac OS or Windows. 
 
-First, you need the corrent link to clone the repository. On the repository main page, click on the 'Code' button.
+First, you need the corrent link to clone the repository. On the repository main page, click on the 'Code' button. 
 
 ```{figure} /_static/lecture_specific/index/screenshot9.png
 :scale: 25%
@@ -204,15 +232,141 @@ Then click on 'HTTPS' and then copy the link via the button on the right circled
 :scale: 25%
 ```
 
-Type 'git clone' and paste the link copied above into the terminal. Your code should look something like this.
+Type 'git clone' and paste the link copied above into the terminal. Your code should look something like this (the repo name being the name you used earlier and not 'testrepo').
 
 ```{code-cell} ipython3
-git clone https://github.com/nencarc-digital/template.git
+git clone https://github.com/nencarc-digital/reponame.git
 ```
 
 ```{figure} /_static/lecture_specific/index/screenshot11.png
+:scale: 45%
+```
+
+You should now have a folder in your directory named the same as the repository name. Type 'ls' or 'dir' (depending if you're on MAC OS or Windows) to see new directory.  
+
+```{figure} /_static/lecture_specific/index/screenshot23.png
+:scale: 35%
+```
+
+Replace the contents of that folder with the contents in the 'template' zip file that was downloaded earlier in the tutorial.
+
+```{figure} /_static/lecture_specific/index/screenshot24.png
 :scale: 25%
 ```
+
+Change your directory in the terminal to the new repository folder using the 'cd' command.
+
+```{code-cell} ipython3
+cd reponame
+```
+
+```{figure} /_static/lecture_specific/index/screenshot25.png
+:scale: 35%
+```
+
+Type 'ls' or 'dir' again and you should see the contents you've just copied over from the template folder.
+
+```{figure} /_static/lecture_specific/index/screenshot26.png
+:scale: 35%
+```
+
+#### Pushing Changes To Github Repository
+
+To upload the updated folder to the GitHub repository, several commands are needed. 
+
+The first of which is the 'add' command. This command adds all new and changed giles to the staging area.
+
+```{code-cell} ipython3
+git add --all
+```
+
+```{figure} /_static/lecture_specific/index/screenshot27.png
+:scale: 35%
+```
+
+The next command is the 'commit' command. This command commits the changes from the staging area, with a message to detail what the changes are generally speaking. 
+
+For this example, we use 'initial commit' (use double quotes on windows) as this is this initial commit to the new respository.
+
+```{code-cell} ipython3
+git commit -m 'initial commit'
+```
+
+```{figure} /_static/lecture_specific/index/screenshot28.png
+:scale: 35%
+```
+
+The final command is the 'push' command. This command pushes the changes to the GitHub repository to the 'main' branch. 
+
+```{code-cell} ipython3
+git push -u origin main 
+```
+
+```{figure} /_static/lecture_specific/index/screenshot29.png
+:scale: 35%
+```
+
+The changes should now be pushed to the Github repository.
+
+```{figure} /_static/lecture_specific/index/screenshot30.png
+:scale: 35%
+```
+
+#### Pushing To Live Github Page
+
+To push to the live Github page, the book needs to be 'built' first. This is done using the command below which utilises the 'jupyterlabs' packages installed earlier. 
+
+```{code-cell} ipython3
+jb build book/  
+```
+
+```{figure} /_static/lecture_specific/index/screenshot31.png
+:scale: 35%
+```
+
+The built book is now visable locally using URL shown, which will be different to the URL for your repository.
+
+```{code-cell} ipython3
+file:///Users/conorwall/reponame/book/_build/html/index.html
+```
+
+```{figure} /_static/lecture_specific/index/screenshot32.png
+:scale: 35%
+```
+
+To push the locally built book to the live Github page, enter the following command.
+
+```{code-cell} ipython3
+ghp-import -n -p -f book/_build/html 
+```
+
+```{figure} /_static/lecture_specific/index/screenshot33.png
+:scale: 35%
+```
+
+This process should take a few minutes to complete but in the Pages settings page, you should see that the website is now live at the specified URL.
+
+```{figure} /_static/lecture_specific/index/screenshot34.png
+:scale: 35%
+```
+
+Here is a screenshot of your new Github Page live!
+
+```{figure} /_static/lecture_specific/index/screenshot35.png
+:scale: 35%
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Adding/Editing/Deleting Content From Page
 
