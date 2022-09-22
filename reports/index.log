@@ -17,13 +17,13 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-conda install -c conda-forge ghp-import
+conda install -c anaconda git
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mValueError[0m                                Traceback (most recent call last)
-[0;32m/var/folders/5p/zmsw1yv53hz4twsf7nhcrytr0000gn/T/ipykernel_17189/2761625588.py[0m in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0;31m [0mget_ipython[0m[0;34m([0m[0;34m)[0m[0;34m.[0m[0mrun_line_magic[0m[0;34m([0m[0;34m'conda'[0m[0;34m,[0m [0;34m'install -c conda-forge ghp-import'[0m[0;34m)[0m[0;34m[0m[0m
+[0;32m/var/folders/5p/zmsw1yv53hz4twsf7nhcrytr0000gn/T/ipykernel_31485/293985370.py[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0mget_ipython[0m[0;34m([0m[0;34m)[0m[0;34m.[0m[0mrun_line_magic[0m[0;34m([0m[0;34m'conda'[0m[0;34m,[0m [0;34m'install -c anaconda git'[0m[0;34m)[0m[0;34m[0m[0m
 [0m
 [0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/IPython/core/interactiveshell.py[0m in [0;36mrun_line_magic[0;34m(self, magic_name, line, _stack_depth)[0m
 [1;32m   2416[0m                 [0mkwargs[0m[0;34m[[0m[0;34m'local_ns'[0m[0;34m][0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mget_local_scope[0m[0;34m([0m[0mstack_depth[0m[0;34m)[0m[0;34m[0m[0m

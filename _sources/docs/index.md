@@ -34,28 +34,52 @@ You will learn how to
 
 ### Packages Needed
 
-To begin, Git is required to be installed on your system. Depending if you are on a Windows device or MAC OS device, there are different installation methods to use. 
+#### Windows Installation
 
-### Anaconda Installation (Windows Only)
+##### Anaconda Installation
 
 Although the use of Git is possible without any python installation, the use of a python environment manager ensures the process is a lot simpler and more convenient. 
 
-Therefore, on a Windows machine the installation of Anaconda is required. 
+Therefore, on a Windows machine the installation of Anaconda is required. The link to the download page can be found [here](https://repo.anaconda.com/archive/Anaconda3-2022.05-Windows-x86_64.exe). 
 
-The link to the download page can be found [here](https://repo.anaconda.com/archive/Anaconda3-2022.05-Windows-x86_64.exe). The following screenshots will help you with the installation process.
+During the installation process, this option will appear. Choose the 'Register' option.
 
-#### Windows Installation
+```{figure} /_static/lecture_specific/index/wscreenshot3.png
+:scale: 55%
+```
 
-For Windows, the following [link](https://github.com/git-for-windows/git/releases/download/v2.37.3.windows.1/Git-2.37.3-32-bit.exe) will lead you to the installation package. 
+Once the installation is finished, Anaconda Prompt is the command line tool you will be using for the development process.
 
-Two additional packages require installation, GHP-Import and JupyterLab.
+```{figure} /_static/lecture_specific/index/wscreenshotanaconda.png
+:scale: 55%
+```
+
+##### Packages Installation
+
+Three packages require installation in Anaconda for Windows, Git, GHP-Import and Jupyter-Books.These can be installed using the code below.
+
+Git Installation
+
+```{code-cell} ipython3
+conda install -c anaconda git
+```
+
+GHP-Import Installation
 
 ```{code-cell} ipython3
 conda install -c conda-forge ghp-import
 ```
 
+Jupyter-Books Installation
+
 ```{code-cell} ipython3
-conda install -c conda-forge jupyterlab
+pip install jupyter-book
+```
+
+An error may occur regarding an outdated 'nodejs' installation. This can be sorted through the command below. 
+
+```{code-cell} ipython3
+conda install -c conda-forge nodejs
 ```
 
 #### Mac OS Installation
@@ -172,6 +196,13 @@ At this stage it may ask for your Github password, which will be sent privately.
 :scale: 45%
 ```
 
+On Windows, this option may appear. Please choose the 'manager-core' option. It may ask you to either 'sign-in' or enter the token which can be generated using the instructions below. Chose the option most convenient to you. 
+
+```{figure} /_static/lecture_specific/index/wscreenshot10.png
+:scale: 45%
+```
+
+
 #### Generating Personal Access Token
 
 Click on the user icon in the top right and then click on settings. 
@@ -218,7 +249,7 @@ A new token should be generated in the red circle. For the sake of security, the
 
 #### Setting Up New Page With Template
 
-To upload the template to the new GitHub Page, you first need to clone the new repository. This should be done using the terminal/Git Bash terminal depending if you are on Mac OS or Windows. 
+To upload the template to the new GitHub Page, you first need to clone the new repository. This should be done using the terminal/Anaconda Prompt depending if you are on Mac OS or Windows. 
 
 First, you need the corrent link to clone the repository. On the repository main page, click on the 'Code' button. 
 
@@ -229,7 +260,7 @@ First, you need the corrent link to clone the repository. On the repository main
 Then click on 'HTTPS' and then copy the link via the button on the right circled. 
 
 ```{figure} /_static/lecture_specific/index/screenshot10.png
-:scale: 25%
+:scale: 45%
 ```
 
 Type 'git clone' and paste the link copied above into the terminal. Your code should look something like this (the repo name being the name you used earlier and not 'testrepo').
@@ -306,6 +337,12 @@ git push -u origin main
 :scale: 35%
 ```
 
+This may come up with an error on Windows, which may require the use of the command below at this stage.
+
+```{code-cell} ipython3
+git push 
+```
+
 The changes should now be pushed to the Github repository.
 
 ```{figure} /_static/lecture_specific/index/screenshot30.png
@@ -350,31 +387,110 @@ This process should take a few minutes to complete but in the Pages settings pag
 :scale: 35%
 ```
 
-Here is a screenshot of your new Github Page live!
+If the source has not changed automatically, please change it to 'gh-pages' in the Page settings page like below.
 
-```{figure} /_static/lecture_specific/index/screenshot35.png
+```{figure} /_static/lecture_specific/index/screenshot36.png
 :scale: 35%
 ```
 
+Here is a screenshot of your new Github Page live!
 
+```{figure} /_static/lecture_specific/index/screenshot35.png
+:scale: 25%
+```
 
+### Editing Page Content 
 
+Prior to being able to edit any page content, the installation of a source-code editor is required. There are a number of available options, with my personal preference being Visual Studio code which can be found at this [link](https://code.visualstudio.com/download).
 
+Other options include [Notepad++](https://notepad-plus-plus.org/downloads/) and [Sumblime](https://www.sublimetext.com/3).
 
+For the sake of convenience, the tutorial will utilise the editor, Visual Studio Code.
 
+#### Opening And Explaining Folder Structure
 
+The first step is to open the repository folder in your editor of choice. This example is in Visual Studio Code. 
 
+```{figure} /_static/lecture_specific/index/screenshot37.png
+:scale: 35%
+```
 
+Select the folder of choice.
 
+```{figure} /_static/lecture_specific/index/screenshot38.png
+:scale: 35%
+```
 
+Below is a general guide of what the important aspects of the folder structure are. 
 
-### Adding/Editing/Deleting Content From Page
+```{figure} /_static/lecture_specific/index/Slide1.jpg
+:scale: 50%
+```
 
-Text will appear here.
+#### Editing Pages
 
-### Uploading Page Content 
+As demonstrated above, the pages are contained in the 'docs' folder. There are various types of content that can included on each page. 
 
-Text will appear here.
+##### General Text
+
+Text generally, unlike in HTML, does not require any special tags for the programming language markdown. 
+
+##### Headings
+
+Headings are annotated using the '#' symbol. The less '#' symbols used, the higher the hierarchy of heading. For example, the heading for the entire page would typically use '#', however any subheading after that would require at the very minimum '##'. 
+
+For any subsection as part of the '##' subsection, they would require an additional symbol, which would result in '###', and so on and so on. 
+
+##### Hyperlinks 
+
+Hyperlinks are simple to implement, as they involve square brackets around the word desired to be clickable, and parentheses containing the link. The code below demonstrates this. 
+
+```{code-cell} ipython3
+The Github repo can be found [here](https://github.com/nencarc-digital/template).
+```
+
+##### Figures
+
+Figures are also simple to implement. All is required is the static link to the image and the scale of the image according to the page. The code below is an example. 
+
+````{code-cell} ipython3
+```{figure} /_static/lecture_specific/index/screenshot38.png
+:scale: 35%
+```
+````
+
+##### Code Cell 
+
+To add a code cell to the page, the following command can be used. 
+
+````{code-cell} ipython3
+```{code-cell} ipython3
+This is example code.
+```
+````
+
+##### Editing Navigation Bar
+
+As shown previously, the '_toc.yml' file contains the details of the navigation bar. 
+
+```{figure} /_static/lecture_specific/index/screenshot39.png
+:scale: 45%
+```
+
+The 'caption' is the name of the book, the 'files' are the pages as part of that 'chapter'. These can be edited as you wish. However, to update the contents for the live page, the command below is required before the build command. 
+
+```{code-cell} ipython3
+jb clean book/
+```
+
+### General Troubleshooting
+
+To change which Github repository you want to work with, the following command can be used. The command below uses an example Github link, use the same link that was used during the cloning repository process.
+
+```{code-cell} ipython3
+git remote set-url origin https://github.com/user/repo.git
+```
+
 
 
 

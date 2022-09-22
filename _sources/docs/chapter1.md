@@ -19,7 +19,6 @@ kernelspec:
 
 ## Overview
 
-
 In this lecture we will
 
 -   outline what Python is
