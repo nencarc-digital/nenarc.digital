@@ -183,7 +183,7 @@ git config --global user.name nencarc-digital
 Then enter your Github email, which  in our case will be 'nencarc.digital@gmail.com'.
 
 ```{code-cell} ipython3
-git config --global user.name nencarc.digital@gmail.com
+git config --global user.email nencarc.digital@gmail.com
 ```
 
 ```{figure} /_static/lecture_specific/index/screenshot12.png
