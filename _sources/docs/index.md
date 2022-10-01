@@ -110,7 +110,7 @@ pip install jupyterlab
 
 #### Downloading Template
 
-Download the template zip file from GitHub using this [link](https://github.com/nencarc-digital/template/raw/main/book/_static/lecture_specific/index/template.zip). Unzip the file and then export the folder to a desired location and save the folder name.
+Download the template zip file from GitHub using this [link](https://drive.google.com/file/d/1hm8K1p0PlVSX8Ib2Y6N_v5y-8NpUfR8Z/view?usp=sharing). Unzip the file and then export the folder to a desired location and save the folder name.
 
 #### Creating New Repository 
 
@@ -263,7 +263,17 @@ Then click on 'HTTPS' and then copy the link via the button on the right circled
 :scale: 45%
 ```
 
-Type 'git clone' and paste the link copied above into the terminal. Your code should look something like this (the repo name being the name you used earlier and not 'testrepo').
+Type 'git clone' and paste the link copied above into the terminal. Your code should look something like this (the repo name being the name you used earlier and not 'testrepo'). 
+
+If on Windows, ensure you do this on the C: drive. The C: drive can be accessed by entering 'C:' into a windows finder.
+
+```{figure} /_static/lecture_specific/index/windowscreenshot11.png
+:scale: 45%
+```
+
+```{figure} /_static/lecture_specific/index/screenshot9.png
+:scale: 25%
+```
 
 ```{code-cell} ipython3
 git clone https://github.com/nencarc-digital/reponame.git
@@ -305,7 +315,7 @@ Type 'ls' or 'dir' again and you should see the contents you've just copied over
 
 To upload the updated folder to the GitHub repository, several commands are needed. 
 
-The first of which is the 'add' command. This command adds all new and changed giles to the staging area.
+The first of which is the 'add' command. This command adds all new and changed files to the staging area.
 
 ```{code-cell} ipython3
 git add --all
@@ -327,6 +337,12 @@ git commit -m 'initial commit'
 :scale: 35%
 ```
 
+If there is an SSL related error when entering this command, paste the following command into the terminal.
+
+```{code-cell} ipython3
+git config --global http.sslVerify false
+```
+
 The final command is the 'push' command. This command pushes the changes to the GitHub repository to the 'main' branch. 
 
 ```{code-cell} ipython3
@@ -340,8 +356,9 @@ git push -u origin main
 This may come up with an error on Windows, which may require the use of the command below at this stage.
 
 ```{code-cell} ipython3
-git push 
+git push -f
 ```
+
 
 The changes should now be pushed to the Github repository.
 
