@@ -110,7 +110,7 @@ pip install jupyterlab
 
 #### Downloading Template
 
-Download the template zip file from GitHub using this [link](https://drive.google.com/file/d/1hm8K1p0PlVSX8Ib2Y6N_v5y-8NpUfR8Z/view?usp=sharing). Unzip the file and then export the folder to a desired location and save the folder name.
+Download the template zip file from GitHub using this [link](https://github.com/nencarc-digital/template/raw/main/book/_static/lecture_specific/index/template.zip). Unzip the file and then export the folder to a desired location and save the folder name.
 
 #### Creating New Repository 
 
@@ -268,7 +268,7 @@ Type 'git clone' and paste the link copied above into the terminal. Your code sh
 If on Windows, ensure you do this on the C: drive. The C: drive can be accessed by entering 'C:' into a windows finder.
 
 ```{figure} /_static/lecture_specific/index/windowscreenshot11.png
-:scale: 45%
+:scale: 25%
 ```
 
 ```{figure} /_static/lecture_specific/index/screenshot9.png
